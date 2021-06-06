@@ -1,0 +1,28 @@
+image: alpine/edge
+packages:
+  - rsync
+secrets:
+  # SSH Deploy Key
+  - f219888a-80af-4275-a777-89e8c7d277f0
+environment:
+  REPO_NAME: nevarro.space
+  WEBSITE_NAME: nevarro.space
+triggers:
+  - action: email
+    condition: failure
+    to: alerts@sumnerevans.com
+tasks:
+  - rsync: |
+      cd $REPO_NAME
+
+      # Skip if not on master
+      git branch --contains | grep master || echo "Skipping deploy since not on master"
+      git branch --contains | grep master || complete-build
+
+      ssh-keyscan nevarro.nevarro.space >> ~/.ssh/known_hosts
+
+      # Copy the website over to the server
+      ssh root@nevarro.nevarro.space "mkdir -p /var/www/${WEBSITE_NAME}" &&
+      rsync -vr --delete-after \
+        index.html \
+        root@nevarro.nevarro.space:/var/www/${WEBSITE_NAME}
