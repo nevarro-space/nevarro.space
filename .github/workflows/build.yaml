@@ -1,0 +1,17 @@
+name: "Build and Deploy"
+on:
+  push:
+    branches: [master]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.4.0
+      - name: rsync
+        uses: up9cloud/action-rsync@v1.3
+        env:
+          HOST: morak.sumnerevans.com
+          KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          SOURCE: index.html
+          TARGET: /var/www/nevarro.space
+          VERBOSE: true
