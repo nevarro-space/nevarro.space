@@ -10,8 +10,8 @@ jobs:
       - name: rsync
         uses: up9cloud/action-rsync@v1.3
         env:
-          HOST: morak.sumnerevans.com
+          HOST: kessel.nevarro.space
           KEY: ${{ secrets.DEPLOY_SSH_KEY }}
-          SOURCE: index.html
+          SOURCE: ./index.html
           TARGET: /var/www/nevarro.space
           VERBOSE: true
