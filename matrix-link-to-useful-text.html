@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Matrix Link to Useful Text</title>
+        <style>
+            input, textarea, button {
+                width: 700px;
+                font-size: 1.5em;
+            }
+            textarea {
+                height: 150px;
+            }
+            #error-text {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            <input id="permalink-input" type="text" placeholder="enter your matrix.to permalink here"/>
+        </p>
+        <p id="error-text">
+        </p>
+        <p>
+            <textarea id="useful-text" onclick="this.select()" readonly></textarea>
+        </p>
+        <p>
+            <button id="copy-button" disabled>Copy</button>
+        </p>
+
+        <script>
+            const permalinkInput = document.getElementById("permalink-input");
+            const errorText = document.getElementById("error-text");
+            const usefulText = document.getElementById("useful-text");
+            const copyButton = document.getElementById("copy-button");
+
+            const getInfo = (permalink) => {
+                const match = permalink.match(/^https?:\/\/matrix.to\/#\/(!.*)\/(\$.*?)(?:\?.*)?$/);
+                if (!match) return null;
+                return {
+                    roomID: match[1],
+                    eventID: match[2],
+                };
+            };
+
+            const copy = () => {
+                usefulText.select();
+                document.execCommand("copy");
+            };
+
+            const updateInfo = () => {
+                const info = getInfo(permalinkInput.value);
+                if (info) {
+                    errorText.innerHTML = "";
+                    usefulText.innerHTML = `Room ID: ${info.roomID}\nEvent ID: ${info.eventID}`;
+                    copyButton.disabled = false;
+                } else {
+                    errorText.innerHTML = "Invalid matrix.to link";
+                    copyButton.disabled = true;
+                }
+                return info != null;
+            };
+
+            permalinkInput.addEventListener("input", updateInfo);
+
+            permalinkInput.addEventListener("keyup", (e) => {
+                if (e.key === "Enter" || e.keyCode === 13) {
+                    copy();
+                }
+            });
+
+            copyButton.addEventListener("click", copy);
+        </script>
+    </body>
+</html>
