@@ -12,6 +12,5 @@ jobs:
         env:
           HOST: kessel.nevarro.space
           KEY: ${{ secrets.DEPLOY_SSH_KEY }}
-          SOURCE: ./*.html
           TARGET: /var/www/nevarro.space
           VERBOSE: true
