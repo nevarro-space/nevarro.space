@@ -6,7 +6,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v3.3.0
       - name: rsync
         uses: up9cloud/action-rsync@v1.3
         env:
