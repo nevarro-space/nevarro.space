@@ -10,20 +10,51 @@
       background-color: #222;
       color: #eee;
       font-family: Iosevka, monospace;
-      line-height: 1.5;
-      font-size: 1.2em;
+      line-height: 1.4;
+      font-size: 1.1em;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+    }
+
+    .container {
       max-width: 800px;
+      margin: 1em;
     }
 
     a,
     a:hover,
     a:visited,
     a:active {
-      color: #0362fc;
+      color: #84B4FF;
     }
 
     a:hover {
       font-weight: bold;
+    }
+
+    header {
+      margin-bottom: 2em;
+      text-align: center;
+      border-bottom: 1px solid #444;
+    }
+
+    footer {
+      color: #777;
+      border-top: 1px solid #444;
+      text-align: center;
+      margin: 1em 0;
+    }
+
+    footer img {
+      width: 100%;
+      max-width: 800px;
+    }
+
+    footer small {
+      display: block;
+      margin-top: 1em;
     }
   </style>
 
@@ -31,135 +62,142 @@
 </head>
 
 <body>
-  <header class="main-header">
-    <img src="n1-square.jpg" width="200" height="200" />
-    <h1>Nevarro</h1>
-  </header>
+  <div class="container">
+    <header class="main-header">
+      <img src="n1-square.jpg" width="200" height="200" />
+      <h1>Nevarro</h1>
+    </header>
+    <main>
+      <p>
+        Nevarro is an company dedicated to building great open source software. It's run by me,
+        <a href="https://sumnerevans.com">Sumner</a>, to provide a variety of computing and educational
+        services.
+      </p>
 
-  <p>
-    Nevarro is an company dedicated to building great open source software. It's run by me,
-    <a href="https://sumnerevans.com">Sumner</a>, to provide a variety of computing and educational
-    services.
-  </p>
+      <h3>Open Source Work</h3>
 
-  <h3>Open Source Work</h3>
+      <ul>
+        <li>
+          <a href="https://wthstack.com" target="_blank">wthstack.com</a> &mdash;
+          A site advocating for the WTH stack (Wails, Templ, HTMX).
+        </li>
+        <li>
+          <a href="https://sublimemusic.app" target="_blank">Sublime Music</a> &mdash;
+          The most beautiful Subsonic client.
+        </li>
+        <li>
+          <a href="https://github.com/nevarro-space/matrix-chessbot" target="_blank">
+            matrix-chessbot</a> &mdash;
+          A bot for playing chess with your friends over Matrix.
+        </li>
+      </ul>
 
-  <p>
-    I am slowly moving some of my personal projects under this organization. Projects owned by
-    Nevarro currently include:
-  </p>
+      <p>
+        <b>Nevarro's GitHub Organization:</b>
+        <a href="https://github.com/nevarro-space">nevarro-space</a>
+      </p>
 
-  <ul>
-    <li><a href="https://sublimemusic.app" target="_blank">Sublime Music</a></li>
-    <li>
-      <a href="https://github.com/nevarro-space/matrix-chessbot" target="_blank">matrix-chessbot</a>
-    </li>
-  </ul>
+      <h3>Tutoring and Mentoring Services</h3>
 
-  <p>
-    <b>Nevarro's GitHub Organization:</b>
-    <a href="https://github.com/nevarro-space">nevarro-space</a>
-  </p>
+      <p>
+        If you are interested in 1-on-1 tutoring in the Golden/Lakewood/Littleton area (Denver Metro),
+        please contact me at <code>tutoring [at] nevarro [dot] space</code>. I can
+        tutor middle school, high school, and college students in all computer science topics as well as
+        some mathematics topics.
+      </p>
 
-  <h3>Tutoring and Mentoring Services</h3>
+      <h3>Matrix Services</h3>
 
-  <p>
-    If you are interested in 1-on-1 tutoring in the Golden/Lakewood/Littleton area (Denver Metro),
-    please contact me at <code>tutoring [at] nevarro [dot] space</code>. I can
-    tutor middle school, high school, and college students in all computer science topics as well as
-    some mathematics topics.
-  </p>
+      <p>
+        <b>Matrix Space:</b> <a href="https://matrix.to/#/#city:nevarro.space">#city:nevarro.space</a>
+      </p>
 
-  <h3>Matrix Services</h3>
+      <h4>Matrix Bots</h4>
 
-  <p>
-    <b>Matrix Space:</b> <a href="https://matrix.to/#/#city:nevarro.space">#city:nevarro.space</a>
-  </p>
+      <p>
+        Nevarro hosts the following Matrix bots on its infrastructure. These bots are free for anyone to
+        use.
+      </p>
 
-  <h4>Matrix Bots</h4>
+      <ul>
+        <li>
+          <a href="https://matrix.to/#/@standupbot:nevarro.space">@standupbot:nevarro.space</a>
+          (<a href="https://github.com/beeper/standupbot">GitHub</a>)
+        </li>
+        <li>
+          <a href="https://matrix.to/#/@chessbot:nevarro.space">@chessbot:nevarro.space</a>
+          (<a href="https://github.com/nevarro-space/matrix-chessbot">GitHub</a>)
+        </li>
+        <li>
+          <a href="https://matrix.to/#/@mscbot:nevarro.space">@mscbot:nevarro.space</a>
+          (<a href="https://github.com/beeper/msc-link-bot">GitHub</a>)
+        </li>
+        <li>
+          <a href="https://matrix.to/#/@meetbot:nevarro.space">@meetbot:nevarro.space</a>
+          (<a href="https://github.com/beeper/meetbot">GitHub</a>)
+        </li>
+      </ul>
 
-  <p>
-    Nevarro hosts the following Matrix bots on its infrastructure. These bots are free for anyone to
-    use.
-  </p>
+      <h4>Matrix Accounts</h4>
 
-  <ul>
-    <li>
-      <a href="https://matrix.to/#/@standupbot:nevarro.space">@standupbot:nevarro.space</a>
-      (<a href="https://github.com/beeper/standupbot">GitHub</a>)
-    </li>
-    <li>
-      <a href="https://matrix.to/#/@chessbot:nevarro.space">@chessbot:nevarro.space</a>
-      (<a href="https://github.com/nevarro-space/matrix-chessbot">GitHub</a>)
-    </li>
-    <li>
-      <a href="https://matrix.to/#/@mscbot:nevarro.space">@mscbot:nevarro.space</a>
-      (<a href="https://github.com/beeper/msc-link-bot">GitHub</a>)
-    </li>
-    <li>
-      <a href="https://matrix.to/#/@meetbot:nevarro.space">@meetbot:nevarro.space</a>
-      (<a href="https://github.com/beeper/meetbot">GitHub</a>)
-    </li>
-  </ul>
+      <p>
+        If you would like a Matrix account on the nevarro.space homeserver, please contact me at
+        <code>admin [at] nevarro [dot] space</code>
+        and I will consider your request and give you a monthly price quote.
+      </p>
 
-  <h4>Matrix Accounts</h4>
+      <h3>Community Hosting</h3>
 
-  <p>
-    If you would like a Matrix account on the nevarro.space homeserver, please contact me at
-    <code>admin [at] nevarro [dot] space</code>
-    and I will consider your request and give you a monthly price quote.
-  </p>
+      <p>
+        Nevarro LLC donates hosting to the following projects:
+      </p>
 
-  <h3>Community Hosting</h3>
+      <ul>
+        <li>
+          The <a href="https://mineshspc.com" target="_blank">Mines HSPC</a> website.
+        </li>
+      </ul>
 
-  <p>
-    Nevarro LLC donates hosting to the following projects:
-  </p>
+      <h3>Support Nevarro</h3>
 
-  <ul>
-    <li>
-      The <a href="https://mineshspc.com" target="_blank">Mines HSPC</a> website.
-    </li>
-  </ul>
+      <p>
+        If you would like to financially support Nevarro, you can do so via
+        <a href="https://github.com/sponsors/nevarro-space">GitHub Sponsors</a>.
+      </p>
 
-  <h3>Support Nevarro</h3>
+      <h3>Legal and Financial Details</h3>
 
-  <p>
-    If you would like to financially support Nevarro, you can do so via
-    <a href="https://github.com/sponsors/nevarro-space">GitHub Sponsors</a>.
-  </p>
+      <p>
+        <b>Why?</b> After hearing about the
+        <a href="https://intuitiveexplanations.com/tech/replit/" target="_blank">legal threats experienced by Radon
+          Rosborough from Replit</a>
+        I decided to start an LLC to protect myself from similar threats. (I also thought it would be
+        fun to own a company.) I am slowly migrating my open source work and other projects to Nevarro
+        LLC, and I may start additional businesses under this LLC eventually as well.
+      </p>
 
-  <h3>Legal and Financial Details</h3>
+      <p>
+        Nevarro LLC is registered in the State of Colorado. It is a single-member LLC, owned by
+        <a href="https://sumnerevans.com">Jonathan Sumner Evans</a>.
+      </p>
 
-  <p>
-    <b>Why?</b> After hearing about the
-    <a href="https://intuitiveexplanations.com/tech/replit/" target="_blank">legal threats experienced by Radon
-      Rosborough from Replit</a>
-    I decided to start an LLC to protect myself from similar threats. (I also thought it would be
-    fun to own a company.) I am slowly migrating my open source work and other projects to Nevarro
-    LLC, and I may start additional businesses under this LLC eventually as well.
-  </p>
-
-  <p>
-    Nevarro LLC is registered in the State of Colorado. It is a single-member LLC, owned by
-    <a href="https://sumnerevans.com">Jonathan Sumner Evans</a>.
-  </p>
-
-  <p>
-    Nevarro LLC is transparent with its finances. I publish monthly, quarterly, and yearly
-    financial reports and budgets here:
-    <a href="https://github.com/nevarro-space/financials">github.com/nevarro-space/financials</a>.
-  </p>
-
-  <hr />
-
-  <p>
-    Here's a picture of Nevarro City from <i>The Mandalorian</i>.
-  </p>
-  <img src="nevarro-city.webp" width="800" />
-  <p>
-    <a href="https://github.com/sumnerevans/nevarro.space">Website source code</a>
-  </p>
+      <p>
+        Nevarro LLC is transparent with its finances. I publish monthly, quarterly, and yearly
+        financial reports and budgets here:
+        <a href="https://github.com/nevarro-space/financials">github.com/nevarro-space/financials</a>.
+      </p>
+    </main>
+    <footer>
+      <p>
+        Here's a picture of Nevarro City from <i>The Mandalorian</i>.
+      </p>
+      <img src="nevarro-city.webp" />
+      <small>
+        &copy; 2024 Nevarro LLC. All Rights Reserved.
+        <a href="https://github.com/nevarro-space/nevarro.space">Source code</a>.
+      </small>
+    </footer>
+  </div>
 </body>
 
 </html>
