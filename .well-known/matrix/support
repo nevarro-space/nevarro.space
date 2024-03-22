@@ -1,0 +1,9 @@
+{
+  "contacts": [
+    {
+      "email_address": "admin@nevarro.space",
+      "role": "m.role.admin"
+    }
+  ],
+  "support_page": "https://nevarro.space"
+}
