@@ -14,7 +14,7 @@
     body {
       background-color: #222;
       color: #eee;
-      font-family: Iosevka, monospace;
+      font-family: 'Iosevka Web', monospace;
       line-height: 1.4;
       font-size: 1.1em;
       width: 100%;
@@ -75,9 +75,36 @@
     </header>
     <main>
       <p>
-        Nevarro is an company dedicated to building great open source software. It's run by me,
-        <a href="https://sumnerevans.com">Sumner</a>, to provide a variety of computing and educational
-        services.
+        Nevarro is a company dedicated to building open source software and providing educational
+        services. Nevarro is wholly owned by <a href="https://sumnerevans.com">Sumner Evans</a>.
+      </p>
+
+      <h3>Tutoring and Mentoring Services</h3>
+
+      <p>
+        I graduated from Colorado School of Mines with a master's in computer science and I've
+        taught computer science classes as an adjunct professor there. During my computer science
+        education, I took calculus and differential equations, linear algebra, and abstract
+        algebra, so I have a good background in mathematics as well. I'm also a taekwondo
+        instructor, so I have lots of experience interacting with younger students. In everything I
+        teach, I try to help students understand the "why" behind what they are learning so they
+        develop an intuition that can serve them beyond a single course or topic. My favorite
+        moment is when a concept "clicks" for a student and I love being a part of that process.
+      </p>
+
+      <p>
+        If you are interested in 1-on-1 tutoring in the Golden/Lakewood/Littleton area (Denver
+        Metro), please contact me at
+        <span id="tutoring-email-link">tutoring [at] nevarro [dot] space</span>.
+        I can tutor middle school, high school, and college students in all computer science topics
+        as well as some mathematics topics. I can also provide mentorship for students and young
+        professionals desiring to enter or recently entering the software engineering field.
+      </p>
+
+      <p>
+        Your tutoring relationship with me will start with a free 30-minute consultation. We will
+        discuss your learning goals and understand whether my teaching style would match your
+        expectations.
       </p>
 
       <h3>Open Source Work</h3>
@@ -93,8 +120,7 @@
           A site advocating for the WTH stack (Wails, Templ, HTMX).
         </li>
         <li>
-          <a href="https://github.com/nevarro-space/matrix-chessbot" target="_blank">
-            matrix-chessbot</a> &mdash;
+          <a href="https://github.com/nevarro-space/matrix-chessbot" target="_blank">matrix-chessbot</a> &mdash;
           A bot for playing chess with your friends over Matrix.
         </li>
       </ul>
@@ -109,15 +135,6 @@
         </ul>
       </details>
 
-      <h3>Tutoring and Mentoring Services</h3>
-
-      <p>
-        If you are interested in 1-on-1 tutoring in the Golden/Lakewood/Littleton area (Denver Metro),
-        please contact me at <code>tutoring [at] nevarro [dot] space</code>. I can
-        tutor middle school, high school, and college students in all computer science topics as well as
-        some mathematics topics.
-      </p>
-
       <h3>Matrix Services</h3>
 
       <p>
@@ -128,7 +145,7 @@
 
       <p>
         If you would like a Matrix account on the nevarro.space homeserver, please contact me at
-        <code>admin [at] nevarro [dot] space</code>
+        <span id="admin-email-link">admin [at] nevarro [dot] space</span>
         and I will consider your request and give you a monthly price quote.
       </p>
 
@@ -184,6 +201,16 @@
       </small>
     </footer>
   </div>
+  <script type="text/javascript">
+    function mkLink(b64) {
+      let link = document.createElement("a");
+      link.innerHTML = atob(b64);
+      link.href = "mailto:" + link.innerHTML;
+      return link;
+    }
+    document.getElementById("tutoring-email-link").replaceWith(mkLink("dHV0b3JpbmdAbmV2YXJyby5zcGFjZQ=="));
+    document.getElementById("admin-email-link").replaceWith(mkLink("YWRtaW5AbmV2YXJyby5zcGFjZQ=="));
+  </script>
 </body>
 
 </html>
