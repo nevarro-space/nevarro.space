@@ -31,14 +31,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
-      - name: Build
-        run: |
-           tar -czvf pages.tar.gz .well-known favicon.ico index.html matrix-link-to-useful-text.html n1-square.jpg nevarro-city.webp
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: pages.tar.gz
+          path: '.'
           include-hidden-files: true
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/master'
