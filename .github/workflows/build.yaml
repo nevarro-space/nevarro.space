@@ -32,17 +32,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
-          path: |
-            .well-known
-            favicon.ico
-            index.html
-            matrix-link-to-useful-text.html
-            n1-square.jpg
-            nevarro-city.webp
-          include-hidden-files: true
+          path: '.'
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/master'
         id: deployment
