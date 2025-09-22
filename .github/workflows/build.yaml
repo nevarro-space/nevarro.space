@@ -35,7 +35,13 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: '.'
+          path: |
+            .well-known
+            favicon.ico
+            index.html
+            matrix-link-to-useful-text.html
+            n1-square.jpg
+            nevarro-city.webp
           include-hidden-files: true
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/master'
