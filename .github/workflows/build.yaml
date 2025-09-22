@@ -31,11 +31,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+      - name: Build
+        run: |
+           tar -czvf pages.tar.gz .
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: '.'
+          path: pages.tar.gz
           include-hidden-files: true
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/master'
