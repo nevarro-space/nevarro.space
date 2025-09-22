@@ -33,7 +33,7 @@ jobs:
         uses: actions/checkout@v5
       - name: Build
         run: |
-           tar -czvf pages.tar.gz .
+           tar -czvf pages.tar.gz .well-known favicon.ico index.html matrix-link-to-useful-text.html n1-square.jpg nevarro-city.webp
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
